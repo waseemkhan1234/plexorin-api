@@ -15,11 +15,13 @@ $apiKey = 'API_ANAHTARINIZI_BURAYA_YAZIN';
 
 // Gönderilecek JSON verisi
 $data = [
-    "title"        => "İçerik Başlığı",
-    "description"  => "İçerik açıklama yazısı",
-    "content_type" => "post", // Enum: post/reels/stories/video
-    "content_url"  => "Public erişimi olan hostingte video/fotoğraf linki",
-    "link"         => "https://plexorin.com/tr/"
+    "accounts"         => ['account_id_1', 'account_id_2'],
+    "title"            => "İçerik Başlığı",
+    "description"      => "İçerik açıklama yazısı",
+    "content_type"     => "post", // Enum: post/reels/stories/video
+    "content_url"      => "Public erişimi olan hostingte video/fotoğraf linki",
+    "cover_image_url"  => "Public erişimi olan hostingte kapak fotoğrafı linki",
+    "link"             => "https://plexorin.com/tr/"
 ];
 
 // Guzzle Client örneği oluştur
@@ -45,11 +47,15 @@ try {
     *    "code": 200,
     *    "message": "Content successfully created.",
     *    "data": {
+    *        "accounts": "Paylaşılan Hesaplar",
     *        "title": "İçerik Başlığı",
     *        "description": "İçerik açıklama yazısı",
-    *        "content_type": "post",
+    *        "content_type": "İçerik türü", // Enum: post/reels/stories/video
     *        "content_url": "Public erişimi olan hostingte video/fotoğraf linki",
-    *        "post_url": "https://plexorin.com/tr/"
+    *        "cover_image_url": "Public erişimi olan hostingte kapak fotoğrafı linki",
+    *        "post_url": "https://plexorin.com/tr/",
+    *        "disable_domain": true, // api kullanımı için domain sınırlandırması olup olmadığı
+    *        "api_key": "api key" // paylaşım yapılması için kullanılan api key
     *    }
     * }
     */
