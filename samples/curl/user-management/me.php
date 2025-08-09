@@ -38,7 +38,14 @@ if (curl_errno($curl)) {
     *        "id": 1,
     *        "domain": null,
     *        "api_key": '',
-    *        "total_publish": 0,
+    *        "usage": {
+    *            "total_publish": 0,
+    *            "daily_usage": 0
+    *        },
+    *        "limits": {
+    *            "daily_publish_limit": 100,
+    *            "account_limit": 20
+    *        },
     *        "connected_at": "2025-01-19 00:00:00",
     *        "created_at": "2025-01-19 00:00:00"
     *    }
