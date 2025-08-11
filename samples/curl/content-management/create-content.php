@@ -14,7 +14,7 @@ $data = [
     "content_url"      => "Public erişimi olan hostingte video/fotoğraf linki",
     "cover_image_url"  => "Public erişimi olan hostingte kapak fotoğrafı linki",
     "link"             => "https://plexorin.com/tr/",
-    "publish_date": "2025-01-01 00:00:00"
+    "publish_date"     => "2025-01-01 00:00:00"
 ];
 
 // cURL oturumunu başlat
