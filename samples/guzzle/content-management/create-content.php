@@ -21,7 +21,8 @@ $data = [
     "content_type"     => "post", // Enum: post/reels/stories/video
     "content_url"      => "Public erişimi olan hostingte video/fotoğraf linki",
     "cover_image_url"  => "Public erişimi olan hostingte kapak fotoğrafı linki",
-    "link"             => "https://plexorin.com/tr/"
+    "link"             => "https://plexorin.com/tr/",
+    "publish_date"     => "2025-01-01 00:00:00"
 ];
 
 // Guzzle Client örneği oluştur
@@ -47,15 +48,22 @@ try {
     *    "code": 200,
     *    "message": "Content successfully created.",
     *    "data": {
-    *        "accounts": "Paylaşılan Hesaplar",
+    *        "accounts": ['account_id_1', 'account_id_2'],
     *        "title": "İçerik Başlığı",
     *        "description": "İçerik açıklama yazısı",
     *        "content_type": "İçerik türü", // Enum: post/reels/stories/video
     *        "content_url": "Public erişimi olan hostingte video/fotoğraf linki",
     *        "cover_image_url": "Public erişimi olan hostingte kapak fotoğrafı linki",
-    *        "post_url": "https://plexorin.com/tr/",
-    *        "disable_domain": true, // api kullanımı için domain sınırlandırması olup olmadığı
-    *        "api_key": "api key" // paylaşım yapılması için kullanılan api key
+    *        "link": "https://plexorin.com/tr/",
+    *        "publish_date": "2025-01-01 00:00:00", // içerik paylaşım tarihi
+    *        "created_contents_data": [
+    *            {
+    *                "content_id": 12345,
+    *                "account_id": 1,
+    *                "platform": "Hesap Platformu",
+    *                "content_url": null
+    *            }
+    *        ]
     *    }
     * }
     */
